@@ -6,15 +6,19 @@ require("./index.css");
 
 class App extends React.Component {
 
-/*  loadAccounts () {
-    return $.getJSON(this.props.server+"/xxxxx/"+this.props.params.promotionid);
+  constructor (props) {
+    super(props);
+    this.state = {
+      accounts: []
+    };
   }
 
-  componentDidMount () {
-    $.getJSON(this.props.server+"/xxxxx/"+this.props.params.promotionid);
-  }*/
+  //loadAccounts () {
+  //  return $.getJSON("http://localhost:8080/accounts.json");
+  //}
 
-  render () {
+  componentDidMount () {
+
     let accounts =  [
 		{
 			"Name": "Team A",
@@ -85,11 +89,18 @@ class App extends React.Component {
 			]
 		}
 	];
+  
+    //this.loadAccounts().then(accounts => {
+      this.setState({'accounts': accounts});
+    //});
+  }
+
+  render () {
 
     return (
       <div>
         <h1>Accounts</h1>
-        <AccountList accounts={accounts} />
+        <AccountList accounts={this.state.accounts} />
       </div>
       );
   }
