@@ -29,8 +29,8 @@ describe('ContactItem', function() {
     expect(highrisk.length).toEqual(1);
 
     expect(name[0].textContent).toEqual('Contact AA');
-    expect(amount[0].textContent).toEqual('20000');
-    //expect(highrisk[0].textContent).toEqual('false');
+    expect(amount[0].textContent).toEqual('Amount: 20000');
+    expect(highrisk[0].textContent).toEqual('High risk: No');
 
   });
 
