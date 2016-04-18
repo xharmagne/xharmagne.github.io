@@ -1,0 +1,40 @@
+.account-name {
+  padding: 0.75rem;
+  font-size: 1.35rem;
+  cursor: hand;
+  text-transform: uppercase;
+}
+
+.account-details {
+  padding: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.account-contacts {
+  margin-top: 1rem;
+  border: solid 2px #a6bbe4;
+}
+
+.contacts-header {
+  padding: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #7a93c8;
+}
+
+.account-item:nth-child(odd) {
+  background-color: #ecf8ff;
+}
+
+.account-item:nth-child(even) {
+  background-color: white;
+}
+
+
+.account-item .account-details {
+  display: block;
+}
+
+.account-item.collapsed .account-details {
+  display:none;
+}
